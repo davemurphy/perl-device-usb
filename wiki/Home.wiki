@@ -1,0 +1,5 @@
+Enhancing Device::USB has been a little difficult due to differences in the [http://libusb.wiki.sourceforge.net/ libusb] libraries for different operating systems. Linux is pretty straight-forward. The libusb version 0.1 or newer is available on most distributions and works with Device::USB out of the box.
+
+Windows variants have been much harder because libusb is not supported. There is a port of libusb to Windows [http://libusb-win32.sourceforge.net/ libusb-win32], but I don't have a development system to do the port at this time.
+
+We have had some luck with Mac OSX. Notes for getting it to work will be uploaded soon.
