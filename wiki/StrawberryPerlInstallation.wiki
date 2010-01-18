@@ -1,5 +1,5 @@
 #summary Instructions for getting Device::USB on Strawberry Perl.
-#labels Phase-Deploy
+#labels Phase-Deploy,Featured
 
 = Introduction =
 
