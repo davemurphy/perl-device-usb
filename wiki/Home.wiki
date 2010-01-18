@@ -4,3 +4,5 @@ Enhancing Device::USB has been a little difficult due to differences in the [htt
 Windows variants have been much harder because libusb is not supported. There is a port of libusb to Windows [http://libusb-win32.sourceforge.net/ libusb-win32], but I don't have a development system to do the port at this time.
 
 We have had some luck with Mac OSX. The main issue appears to be the libusb that comes installed is not compatible. The trick appears to be to go to [http://libusb.wiki.sourceforge.net/ libusb at SourceForge] and get the latest version from Subversion or CVS. Follow the instructions to compile libusb. Device::USB should now install without any difficulty.
+
+StrawberryPerlInstallation now documents the steps to install Device::USB on [http://strawberryperl.org Strawberry Perl].
