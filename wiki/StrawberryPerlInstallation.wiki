@@ -1,0 +1,45 @@
+#summary Instructions for getting Device::USB on Strawberry Perl.
+#labels Phase-Deploy
+
+= Introduction =
+
+Although the Device::USB project was orignally developed on Linux, this has not stopped Windows developers from wanting to access their USB devices. [http://strawberryperl.com/ Strawberry Perl] actually makes this fairly easy.
+
+= Pre-Requisites =
+
+Before installing Device::USB, you will need a few other things first.
+
+  # Install [http://strawberryperl.com/ Strawberry Perl]
+  # Install the [http://libusb-win32.sourceforge.net/ libusb-win32] library
+  # Install the [http://search.cpan.org/search?query=Inline%3A%3AC&mode=module Inline::C] Perl module
+
+If you are on this page, you have probably already accomplished step 1. The second step provides the library needed to talk to USB hardware of all types. Device::USB provides a Perl wrapper for this library.
+
+Step three is needed in order to do an installation with an Inline::C module.
+
+= Installation =
+
+Once you have the pre-requisites taken care of, the installation is really straight-forward.
+
+Since Windows does not really have a standard directory structure for include files and libraries, we need to tell the Device::USB installation where to find these files for libusb-win32.
+
+  # For Strawberry Perl, installation is normally performed from a command line. So you need to open a command (or DOS) window.
+  # Create or change to a short directory without spaces in the name. Spaces in the directory name causes problems with the *cpan* program.
+{{{
+    cd C:\TEMP
+}}}
+  # The Device::USB installation code gets this information from two environment variables: *LIBUSB_INCDIR* and *LIBUSB_LIBDIR*. If you installed libusb-win32 in the default location, you can use the lines below:
+{{{
+    set LIBUSB_INCDIR=\Program Files\LibUSB-Win32\include
+    set LIBUSB_LIBDIR=\Program Files\LibUSB-Win32\lib\gcc
+}}}
+  # Install Device::USB with *cpan*
+{{{
+    cpan Device::USB
+}}}
+
+This should complete successfully and Device::USB will be available. An easy test is to use perldoc to verify that the POD has been installed.
+
+{{{
+    perldoc Device::USB
+}}}
